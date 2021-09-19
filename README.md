@@ -41,8 +41,8 @@ module.exports = {
         baseId: process.env.AIRTABLE_BASE, //required
         tables: [
           {
-            name: 'test',
-            typeName: 'test', //required - needs to match template name
+            name: 'table_name',
+            typeName: 'table_name', //required - needs to match template name
             select: {}, //optional
             links: [], //optional
           },
@@ -51,7 +51,7 @@ module.exports = {
     },
   ],
   templates: {
-    test: '/test/:id', //optional
+    table_name: '/table_name/:id', //optional
   },
 };
 
@@ -62,7 +62,7 @@ module.exports = {
 - `typeName` is what you would like to call your data in GraphQL
 
 **Note:** In order for your templates to generate properly at the specified route a `typeName.vue` file must exist
-in `\templates`. In this starter, this is `\templates\Event.vue` for the `Event` type.
+in `\templates`.
 
 ### dotenv file
 
